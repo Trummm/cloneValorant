@@ -1,0 +1,43 @@
+:root {
+  --primary-btn: #ff4655;
+  --text-color: #f9f9f9;
+  --primary-color: #ff4655;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.6rem;
+}
+
+@keyframes headerDropDownSlideIn {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes headerDropDownSlideFadeRight {
+  from {
+    transform: translateX(-770px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes headerDropDownSlideFadeLeft {
+  from {
+    transform: translateX(315px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

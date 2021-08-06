@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon"/>
+    <title>Valorant</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+                <!-- LEFT -->
+                <div class="header__left">
+    
+                    <label for="header__left-chechbox" href="" class="header__left-link">
+                        <span class="header__left-logo"></span>
+                        <div class="header__left-icon">
+                            <i class="header__left-icon-item fas fa-caret-down"></i>
+                        </div>
+                    </label>
+    
+                    <input type="checkbox" hidden id="header__left-chechbox" class="checkbox-input">
+    
+                    <!-- HEADER LEFT DROPDOWN -->
+                    <label class="header__left-drop-down">
+                        <svg width="24" height="24" class="_2Wu16JFXgL45XAAxtI3_zs header__left-drop-down-icon" viewBox="0 0 19 11">
+                            <title>applicationSwitcherArrow</title>
+                            <path d="M17.706 8.97c.63.681.184 1.846-.707 1.846H1.002c-.89 0-1.337-1.165-.707-1.846L8.293.317a.947.947 0 011.415 0l7.998 8.653z" fill="#F9F9F9"></path>
+                        </svg>
+    
+                        <div class="header__left-drop-down-title">
+                            <h2 class="header__left-drop-down-text">RIOT GAMES</h2>
+    
+                            <div class="header__left-drop-down-close">
+                                <span class="header__left-drop-down-text2">TỚI RIOT GAMES</span>
+
+                                <label for="header__left-chechbox" class="header__left-drop-down-close-icon">
+                                    <i class="header__left-drop-down-close-icon-item fas fa-times"></i>
+                                </label>                        
+                            </div>
+                        </div>
+    
+                        <div class="header__left-drop-down-container">
+                            <div class="header__left-drop-down-img">
+                                <img src="./assets/img/VN_WR_SentinelsBarPromo_660x428_v2.jpeg" alt="" class="header__left-drop-down-img-item">
+                                <span class="header__left-drop-down-img-text">Cùng sát cánh chiến đấu với các Vệ Binh Ánh Sáng trong sự kiện hoành tráng nhất của chúng tôi từ trước đến nay.</span>
+                            </div>
+                            <div class="header__left-drop-down-img">
+                                <img src="./assets/img/Riot_Bar_Application_Switcher_Riot_Bar_660x428_vn.jpeg" alt="" class="header__left-drop-down-img-item">
+                                <span class="header__left-drop-down-img-text">Hãy vực dậy đế quốc của bạn trong bản mở rộng mới nhất của Huyền Thoại Runeterra.</span>
+                            </div>
+
+                            <div class="header__left-drop-down-img2">
+                                <div class="header__left-drop-down-img1">
+                                    <img src="./assets/img/LOL_Key_Art_2021_318x428_RiotBar.jpeg" alt="" class="header__left-drop-down-img-item2">
+                                    <span class="header__left-drop-down-img-text">Chơi ngay bây giờ</span>
+                                </div>
+                                <div class="header__left-drop-down-img1">
+                                    <img src="./assets/img/VN_WR_SentinelsBar_318x428_v2.jpeg" alt="" class="header__left-drop-down-img-item2">
+                                    <span class="header__left-drop-down-img-text">Chơi ngay bây giờ</span>
+                                </div>
+                                <div class="header__left-drop-down-img1">
+                                    <img src="./assets/img/LoR_SL2021_RiotBarSwitcher_318x428_vn.jpeg" alt="" class="header__left-drop-down-img-item2">
+                                    <span class="header__left-drop-down-img-text">Chơi ngay bây giờ</span>
+                                </div>
+                                <div class="header__left-drop-down-img1">
+                                    <img src="./assets/img/Riot_Nav_Bar_Graphic_318x428.jpeg" alt="" class="header__left-drop-down-img-item2">
+                                    <span class="header__left-drop-down-img-text">Chơi ngay bây giờ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+    
+                <!-- CENTER -->
+                <div class="header__center">
+                    <div class="header__center-logo-mobile">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="80" viewBox="0 0 690 98.9" width="109">
+                            <path
+                                d="M615.11 19.15h24.69l.08 75.59c0 .97.79 1.77 1.77 1.77l14.14-.01c.98 0 1.77-.79 1.77-1.77l-.08-75.58h30.96c.91 0 1.43-1.06.85-1.77l-10.6-13.26a4.68 4.68 0 00-3.65-1.76h-59.93c-.98 0-1.77.79-1.77 1.77v13.26c0 .96.79 1.76 1.77 1.76M19.25 94.75L91.67 4.13c.57-.71.06-1.77-.85-1.77H72.71c-1.42 0-2.77.65-3.65 1.76L17.68 68.4V4.12c0-.98-.79-1.77-1.77-1.77H1.77C.79 2.35 0 3.14 0 4.12v90.62c0 .98.79 1.77 1.77 1.77H15.6c1.42 0 2.76-.65 3.65-1.76M70.31 94.75l24.91-31.17 24.91 31.17a4.685 4.685 0 003.66 1.76h13.83c.98 0 1.77-.79 1.77-1.77V4.12c0-.97-.79-1.77-1.77-1.77h-11.6c-2.84 0-5.53 1.29-7.31 3.51L47.69 94.73c-.57.71-.06 1.77.85 1.77h18.11c1.43.01 2.77-.64 3.66-1.75m51.39-66.21v41.75l-16.68-20.87 16.68-20.88zM526.07 94.73L453.65 4.11A4.68 4.68 0 00450 2.35h-13.84c-.98 0-1.77.79-1.77 1.77v90.62c0 .98.79 1.77 1.77 1.77h13.83c1.42 0 2.77-.65 3.65-1.76l24.91-31.17 24.91 31.17a4.68 4.68 0 003.65 1.76h18.11c.91 0 1.42-1.06.85-1.78m-57.33-45.31L452.05 70.3V28.54l16.69 20.88zM269.45 0c-27.3 0-49.43 22.13-49.43 49.43s22.13 49.43 49.43 49.43 49.43-22.13 49.43-49.43C318.89 22.13 296.75 0 269.45 0m0 82.06c-17.54 0-31.75-14.61-31.75-32.63 0-18.02 14.21-32.64 31.75-32.64S301.2 31.4 301.2 49.43c.01 18.02-14.21 32.63-31.75 32.63M583.38 4.12V68.4L532 4.11a4.68 4.68 0 00-3.65-1.76H514.5c-.97 0-1.77.79-1.77 1.77v43.67c0 1.06.36 2.09 1.03 2.92l14.71 18.41c.65.81 1.95.35 1.95-.68v-38l51.39 64.31a4.68 4.68 0 003.65 1.76h13.83c.98 0 1.77-.79 1.77-1.77V4.12c0-.97-.79-1.77-1.77-1.77h-14.14c-.98 0-1.77.8-1.77 1.77M410.62 23.76V4.12c0-.98-.79-1.77-1.77-1.77h-72.37c-.98 0-1.77.79-1.77 1.77v90.62c0 .98.79 1.77 1.77 1.77h14.14c.98 0 1.77-.79 1.77-1.77V19.16h40.55l-27.37 34.26c-.51.64-.51 1.56 0 2.21l31.27 39.13a4.68 4.68 0 003.65 1.76h18.11c.91 0 1.42-1.06.85-1.77l-32.14-40.21 22.28-27.84c.66-.85 1.03-1.88 1.03-2.94M162.39 96.51h41.96c1.42 0 2.77-.65 3.65-1.76l10.6-13.27c.57-.71.06-1.77-.85-1.77H178.3V4.12c0-.98-.79-1.77-1.77-1.77h-14.14c-.98 0-1.77.79-1.77 1.77v90.62c0 .97.8 1.77 1.77 1.77"
+                                fill="#fff"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <ul class="header__center-list">
+                        <li class="header__center-list-item-icon">
+                            <a href="#" class="header__center-list-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="35" viewBox="0 0 100 100" width="35">
+                                    <path
+                                        d="M99.25 48.66V10.28c0-.59-.75-.86-1.12-.39l-41.92 52.4a.627.627 0 00.49 1.02h30.29c.82 0 1.59-.37 2.1-1.01l9.57-11.96c.38-.48.59-1.07.59-1.68zM1.17 50.34L32.66 89.7c.51.64 1.28 1.01 2.1 1.01h30.29c.53 0 .82-.61.49-1.02L1.7 9.89c-.37-.46-1.12-.2-1.12.39v38.38c0 .61.21 1.2.59 1.68z"
+                                        fill="#fff"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__center-list-item">
+                            <a href="#" class="header__center-list-link">
+                               THÔNG TIN TRÒ CHƠI
+                               <i class="header__center-icon-item fas fa-caret-down"></i>
+
+                               <ul class="header__center-list-drop-down">
+                                   <li class="header__center-list-drop-down-item">
+                                        <span class="header__center-list-name">Điệp Viên</span>
+                                   </li>
+                                   <li class="header__center-list-drop-down-item">
+                                    <span class="header__center-list-name">Bản đồ</span>
+                                   </li>
+                                   <li class="header__center-list-drop-down-item">
+                                    <span class="header__center-list-name">Kho vũ khí</span>
+                                   </li>
+                               </ul>
+                            </a>
+                        </li>
+                        <li class="header__center-list-item">
+                            <a href="#" class="header__center-list-link">
+                               TRUYỀN THÔNG
+                            </a>
+                        </li>
+                        <li class="header__center-list-item">
+                            <a href="#" class="header__center-list-link">
+                               TIN TỨC
+                            </a>
+                        </li>
+                        <li class="header__center-list-item">
+                            <a href="#" class="header__center-list-link">
+                               HỖ TRỢ 
+                               <i class="header__center-icon-item fas fa-caret-down"></i> 
+                               
+                               <ul class="header__center-list-drop-down">
+                                <li class="header__center-list-drop-down-item">
+                                     <span class="header__center-list-name">thông số</span>
+                                </li>
+                                <li class="header__center-list-drop-down-item">
+                                 <span class="header__center-list-name">hỗ trợ</span>
+                                </li>
+                                <li class="header__center-list-drop-down-item">
+                                 <span class="header__center-list-name">quy chuẩn</span>
+                                </li>
+                            </ul>
+                            </a>
+                        </li>
+                        <li class="header__center-list-item">
+                            <a href="#" class="header__center-list-link">
+                               MẠNG XÃ HỘI
+                               <i class="header__center-icon-item fas fa-caret-down"></i>
+
+                               <ul class="header__center-list-drop-down">
+                                <li class="header__center-list-drop-down-item">
+                                     <span class="header__center-list-name">facebook</span>
+                                </li>
+                                <li class="header__center-list-drop-down-item">
+                                 <span class="header__center-list-name">instagram</span>
+                                </li>
+                                <li class="header__center-list-drop-down-item">
+                                 <span class="header__center-list-name">youtube</span>
+                                </li>
+                            </ul>
+                            </a>
+                        </li>
+                        <li class="header__center-list-item">
+                            <a href="#" class="header__center-list-link">
+                               THỂ THAO ĐIỆN TỬ                      
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- RIGHT -->
+                <div class="header__right">
+                    <div class="header__right-item">
+                        <div class="header__right-item-icon">
+                            <label for="header__right" class="header__right-item-border">
+                                <a class="header__right-item-border-link">
+                                    <svg width="14" height="14" class="" viewBox="0 0 16 16">
+                                        <title>globeIcon</title>
+                                        <path
+                                            d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0113.536 4.8zM8 1.632A11.27 11.27 0 019.528 4.8H6.472A11.27 11.27 0 018 1.632zM1.808 9.6A6.594 6.594 0 011.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 004.4 8c0 .544.048 1.072.112 1.6H1.808zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 012.464 11.2zm2.36-6.4h-2.36a6.39 6.39 0 013.464-2.848A12.52 12.52 0 004.824 4.8zM8 14.368A11.27 11.27 0 016.472 11.2h3.056A11.27 11.27 0 018 14.368zM9.872 9.6H6.128A11.77 11.77 0 016 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6zm.2 4.448a12.52 12.52 0 001.104-2.848h2.36a6.424 6.424 0 01-3.464 2.848zM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704z"
+                                            fill="#E8E8E8"
+                                        ></path>
+                                    </svg>                                
+                                </a>
+
+                                <input type="checkbox" hidden id="header__right" class="header__right-checkbox">
+                                
+                                <div class="header__right-drop-down-icon"></div>
+                                <ul class="header__right-item-border-list">
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            ENGLISH (NA)
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            ENGLISH (EUW)
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            DEUTSCH
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Español (EUW)
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Français
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Italiano
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Polski
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Русский
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Türkçe
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Español (LATAM)
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Indonesian
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            Tiếng Việt
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            繁體中文
+                                        </span>
+                                    </li>
+                                    <li class="header__right-item-border-item">
+                                        <span class="header__right-item-border-name">
+                                            العربية
+                                        </span>
+                                    </li>
+                                </ul>
+                            </label>
+                        </div>
+    
+                        <button class="header__right-btn">CHƠI NGAY</button>
+
+                        <input type="checkbox" hidden id="header__right-list-mobile-checkBox" class="header__right-list-mobile-checked">
+
+                        <label for="header__right-list-mobile-checkBox" class="header__right-menu-mobile">
+                            <svg width="32" height="32" class="" viewBox="0 0 32 32">
+                                <title>burgerNav</title>
+                                <circle opacity=".07" cx="16" cy="16" r="16" fill="#F9F9F9"></circle>
+                                <path fill="#C7C7C7" d="M22 10v2H10v-2zm0 5v2H10v-2zm0 5v2H10v-2z"></path>
+                            </svg>
+                        </label>
+                        <div  class="header__right-list-mobile">
+                            <div class="header__right-list-mobile-header">
+                                <div class="header__right-list-mobile-header-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="35" viewBox="0 0 690 98.9" width="109">
+                                        <path
+                                            d="M615.11 19.15h24.69l.08 75.59c0 .97.79 1.77 1.77 1.77l14.14-.01c.98 0 1.77-.79 1.77-1.77l-.08-75.58h30.96c.91 0 1.43-1.06.85-1.77l-10.6-13.26a4.68 4.68 0 00-3.65-1.76h-59.93c-.98 0-1.77.79-1.77 1.77v13.26c0 .96.79 1.76 1.77 1.76M19.25 94.75L91.67 4.13c.57-.71.06-1.77-.85-1.77H72.71c-1.42 0-2.77.65-3.65 1.76L17.68 68.4V4.12c0-.98-.79-1.77-1.77-1.77H1.77C.79 2.35 0 3.14 0 4.12v90.62c0 .98.79 1.77 1.77 1.77H15.6c1.42 0 2.76-.65 3.65-1.76M70.31 94.75l24.91-31.17 24.91 31.17a4.685 4.685 0 003.66 1.76h13.83c.98 0 1.77-.79 1.77-1.77V4.12c0-.97-.79-1.77-1.77-1.77h-11.6c-2.84 0-5.53 1.29-7.31 3.51L47.69 94.73c-.57.71-.06 1.77.85 1.77h18.11c1.43.01 2.77-.64 3.66-1.75m51.39-66.21v41.75l-16.68-20.87 16.68-20.88zM526.07 94.73L453.65 4.11A4.68 4.68 0 00450 2.35h-13.84c-.98 0-1.77.79-1.77 1.77v90.62c0 .98.79 1.77 1.77 1.77h13.83c1.42 0 2.77-.65 3.65-1.76l24.91-31.17 24.91 31.17a4.68 4.68 0 003.65 1.76h18.11c.91 0 1.42-1.06.85-1.78m-57.33-45.31L452.05 70.3V28.54l16.69 20.88zM269.45 0c-27.3 0-49.43 22.13-49.43 49.43s22.13 49.43 49.43 49.43 49.43-22.13 49.43-49.43C318.89 22.13 296.75 0 269.45 0m0 82.06c-17.54 0-31.75-14.61-31.75-32.63 0-18.02 14.21-32.64 31.75-32.64S301.2 31.4 301.2 49.43c.01 18.02-14.21 32.63-31.75 32.63M583.38 4.12V68.4L532 4.11a4.68 4.68 0 00-3.65-1.76H514.5c-.97 0-1.77.79-1.77 1.77v43.67c0 1.06.36 2.09 1.03 2.92l14.71 18.41c.65.81 1.95.35 1.95-.68v-38l51.39 64.31a4.68 4.68 0 003.65 1.76h13.83c.98 0 1.77-.79 1.77-1.77V4.12c0-.97-.79-1.77-1.77-1.77h-14.14c-.98 0-1.77.8-1.77 1.77M410.62 23.76V4.12c0-.98-.79-1.77-1.77-1.77h-72.37c-.98 0-1.77.79-1.77 1.77v90.62c0 .98.79 1.77 1.77 1.77h14.14c.98 0 1.77-.79 1.77-1.77V19.16h40.55l-27.37 34.26c-.51.64-.51 1.56 0 2.21l31.27 39.13a4.68 4.68 0 003.65 1.76h18.11c.91 0 1.42-1.06.85-1.77l-32.14-40.21 22.28-27.84c.66-.85 1.03-1.88 1.03-2.94M162.39 96.51h41.96c1.42 0 2.77-.65 3.65-1.76l10.6-13.27c.57-.71.06-1.77-.85-1.77H178.3V4.12c0-.98-.79-1.77-1.77-1.77h-14.14c-.98 0-1.77.79-1.77 1.77v90.62c0 .97.8 1.77 1.77 1.77"
+                                            fill="#fff"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <label for="header__right-list-mobile-checkBox" class="header__right-list-mobile-header-close">
+                                    <svg width="32" height="32" class="" viewBox="0 0 32 32">
+                                        <title>burgerNavClose</title>
+                                        <circle opacity=".07" cx="16" cy="16" r="16" fill="#F9F9F9"></circle>
+                                        <path d="M12.007 11.973l8.132 8.132m-8.146-.012l8.131-8.132" stroke="#C7C7C7" stroke-width="2"></path>
+                                    </svg>
+                                </label>
+                            </div>
+
+                            <ul class="header__right-list-mobile-list">
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        CHƠI NGAY
+                                    </a>
+                                </li>
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        THÔNG TIN TRÒ CHƠI
+                                    </a>
+                                </li>
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        TRUYỀN THÔNG
+                                    </a>
+                                </li>
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        TIN TỨC
+                                    </a>
+                                </li>
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        HỖ TRỢ
+                                    </a>
+                                </li>
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        MẠNG XÃ HỘI
+                                    </a>
+                                </li>
+                                <li class="header__right-list-mobile-list-item">
+                                    <a href="" class="header__right-list-mobile-link">
+                                        THỂ THAO  ĐIỆN TỬ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- CONTAINER -->
+        <div class="container">
+            <section class="container__header-section-1">
+                <video src="./assets/img/New video3.mp4" muted loop autoplay class="container__video-item"></video>
+
+                <div class="container__title">
+                        <p class="container__title-p">
+                            Một tựa game bắn súng chiến thuật 5 đấu 5 lấy các nhân vật làm nền tảng
+                        </p>
+
+
+                        <div class="container__title-logo">
+                            <svg viewBox="0 0 690 98.9">
+                                <path
+                                    d="M615.11 19.15h24.69l.08 75.59c0 .97.79 1.77 1.77 1.77l14.14-.01c.98 0 1.77-.79 1.77-1.77l-.08-75.58h30.96c.91 0 1.43-1.06.85-1.77l-10.6-13.26a4.68 4.68 0 00-3.65-1.76h-59.93c-.98 0-1.77.79-1.77 1.77v13.26c0 .96.79 1.76 1.77 1.76M19.25 94.75L91.67 4.13c.57-.71.06-1.77-.85-1.77H72.71c-1.42 0-2.77.65-3.65 1.76L17.68 68.4V4.12c0-.98-.79-1.77-1.77-1.77H1.77C.79 2.35 0 3.14 0 4.12v90.62c0 .98.79 1.77 1.77 1.77H15.6c1.42 0 2.76-.65 3.65-1.76m51.06 0l24.91-31.17 24.91 31.17a4.685 4.685 0 003.66 1.76h13.83c.98 0 1.77-.79 1.77-1.77V4.12c0-.97-.79-1.77-1.77-1.77h-11.6c-2.84 0-5.53 1.29-7.31 3.51L47.69 94.73c-.57.71-.06 1.77.85 1.77h18.11c1.43.01 2.77-.64 3.66-1.75m51.39-66.21v41.75l-16.68-20.87 16.68-20.88zm404.37 66.19L453.65 4.11A4.68 4.68 0 00450 2.35h-13.84c-.98 0-1.77.79-1.77 1.77v90.62c0 .98.79 1.77 1.77 1.77h13.83c1.42 0 2.77-.65 3.65-1.76l24.91-31.17 24.91 31.17a4.68 4.68 0 003.65 1.76h18.11c.91 0 1.42-1.06.85-1.78m-57.33-45.31L452.05 70.3V28.54l16.69 20.88zM269.45 0c-27.3 0-49.43 22.13-49.43 49.43s22.13 49.43 49.43 49.43 49.43-22.13 49.43-49.43C318.89 22.13 296.75 0 269.45 0m0 82.06c-17.54 0-31.75-14.61-31.75-32.63 0-18.02 14.21-32.64 31.75-32.64S301.2 31.4 301.2 49.43c.01 18.02-14.21 32.63-31.75 32.63M583.38 4.12V68.4L532 4.11a4.68 4.68 0 00-3.65-1.76H514.5c-.97 0-1.77.79-1.77 1.77v43.67c0 1.06.36 2.09 1.03 2.92l14.71 18.41c.65.81 1.95.35 1.95-.68v-38l51.39 64.31a4.68 4.68 0 003.65 1.76h13.83c.98 0 1.77-.79 1.77-1.77V4.12c0-.97-.79-1.77-1.77-1.77h-14.14c-.98 0-1.77.8-1.77 1.77M410.62 23.76V4.12c0-.98-.79-1.77-1.77-1.77h-72.37c-.98 0-1.77.79-1.77 1.77v90.62c0 .98.79 1.77 1.77 1.77h14.14c.98 0 1.77-.79 1.77-1.77V19.16h40.55l-27.37 34.26c-.51.64-.51 1.56 0 2.21l31.27 39.13a4.68 4.68 0 003.65 1.76h18.11c.91 0 1.42-1.06.85-1.77l-32.14-40.21 22.28-27.84c.66-.85 1.03-1.88 1.03-2.94M162.39 96.51h41.96c1.42 0 2.77-.65 3.65-1.76l10.6-13.27c.57-.71.06-1.77-.85-1.77H178.3V4.12c0-.98-.79-1.77-1.77-1.77h-14.14c-.98 0-1.77.79-1.77 1.77v90.62c0 .97.8 1.77 1.77 1.77"
+                                ></path>
+                            </svg>
+                        </div>
+                        
+                        <button class="container__title-btn">
+                                <div class="container__title-btn-hover">
+                                    <span class="container__title-hover-text">
+                                        CHƠI MIỄN PHÍ
+                                    </span>
+                                </div>
+                        </button>
+
+                        <div class="container__title-rectangle"></div>
+            </div>
+
+            </section>
+
+            <!-- CONTAINER 2 -->
+            <section class="container__header-section-2">
+                <div class="container__header-section-2-backGround-text">
+                    <h2 class="backGround-text" data-aos="fade-right">
+                        <span class="backGround-text-item1">WE ARE</span>
+                        <span class="backGround-text-item2">VALORANT</span>
+                    </h2>
+                </div>
+                
+                <div class="container__header-section-2-rectangle"></div>
+
+                <div class="container__header-section-2-title">
+                    <header class="container__header-section-2-title-header">
+                        <h2 class="container__header-section-2-title-text" data-aos="fade-up">TIN TỨC MỚI NHẤT</h2>
+                        <a href="#" class="container__header-section-2-title-link">
+                            <p class="container__header-section-2-title-text2">ĐẾN TRANG TIN TỨC</p>
+                            <div class="container__header-section-2-title-icon" data-aos="fade-right">
+                                <svg viewBox="0 0 25 15">
+                                    <path d="M16.2.5L19.9 4m4.6 3.5l-8.3 7" fill="none" stroke="#ff4655"></path>
+                                    <path fill="none" stroke="#ff4655" stroke-miterlimit="10" d="M16 7.5H0"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </header>
+
+                    <div class="container__header-section-2-title-section">
+                        <div class="container__header-section-2-title-section-item" data-aos="fade-right">
+                            <div class="container__header-section-2-title-section-img">
+                                <img src="./assets/img/PLAYER-PROFILE_v2_1920x1080.jpeg" alt="" class="container__header-section-2-title-section-img-item">
+                            </div>
+                            <div class="container__header-section-2-title-section-title">
+                                <span class="container__header-section-2-title-section-text">30/07/21</span>
+                                <span class="container__header-section-2-title-section-text2">THỂ THAO ĐIỆN TỬ</span>
+                            </div>
+                            <p class="container__header-section-2-title-section-h3">CÂU CHUYỆN TRẬN THẾ: DANI</p>
+                        </div>
+                        <div class="container__header-section-2-title-section-item" data-aos="fade-up">
+                            <div class="container__header-section-2-title-section-img">
+                                <img src="./assets/img/Val_Banner_Ruination_Sentinels_1920x1080.jpeg" alt="" class="container__header-section-2-title-section-img-item">
+                            </div>
+                            <div class="container__header-section-2-title-section-title">
+                                <span class="container__header-section-2-title-section-text">23/07/21</span>
+                                <span class="container__header-section-2-title-section-text2">ĐỘI NGŨ PHÁT TRIỂN</span>
+                            </div>
+                            <p class="container__header-section-2-title-section-h3">CHÚNG TÔI ĐÃ MANG VỆ BINH ÁNH SÁNG ĐẾN VALORANT NHƯ NÀO</p>
+                        </div>
+                        <div class="container__header-section-2-title-section-item" data-aos="fade-left">
+                            <div class="container__header-section-2-title-section-img">
+                                <img src="./assets/img/Astra_Cypher_1920x1080.jpeg" alt="" class="container__header-section-2-title-section-img-item">
+                            </div>
+                            <div class="container__header-section-2-title-section-title">
+                                <span class="container__header-section-2-title-section-text">20/07/21</span>
+                                <span class="container__header-section-2-title-section-text2">CẬP NHẬT TRÒ CHƠI</span>
+                            </div>
+                            <p class="container__header-section-2-title-section-h3">VALORANT - THÔNG TIN BẢN CẬP NHẬT 3.02</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTAINER 3 -->
+            <section class="container__header-section-3">
+                <div class="container__header-section-3-header">
+                    <div class="container__header-section-3-header-item">
+                        <h1 class="container__header-section-3-title">CHÚNG TÔI LÀ VALORANT</h1>
+                    
+                        <h6 class="container__header-section-3-title2">
+                            <span class="container__header-section-3-title2-text" data-aos="fade-left"><bdo dir="rtl">VLTR PR0T0C0L</bdo></span>
+                            <span class="container__header-section-3-title2-text" data-aos="fade-left"><bdo dir="rtl">MR0C - SWD - BR4</bdo></span>
+                        </h6>
+                    </div>
+
+                    <div class="container__header-section-3-rectangle"></div>
+                    <div class="container__header-section-3-section">
+                        <div class="container__header-section-3-text">
+                            <h6 class="container__header-section-3-text-h6" data-aos="fade-right">THÁCH THỨC MỌI GIỚI HẠN</h6>
+                            <p class="container__header-section-3-text-p" data-aos="fade-up">Mang phong cách và trải nghiệm cá nhân tới đấu trường cạnh tranh toàn cầu. Bạn có 13 vòng đấu để tấn công và phòng thủ bằng kỹ năng đấu súng và tư duy chiến thuật sắc bén. Với chỉ 1 mạng mỗi vòng đấu, nhanh trí là yếu tố sẽ giúp bạn sống sót trước kẻ địch. Hãy tranh tài trong các chế độ Đấu Xếp Hạng, Đấu Thường, Sinh Tử và Spike Thần Tốc.</p>
+                            <a href="" class="container__header-section-3-text-link" data-aos="fade-right">Xem trailer lối chơi tại đây.</a>
+                        </div>
+    
+                        <div class="container__header-section-3-video" data-aos="zoom-in">
+                            <iframe class="video__mobile" width="705" height="396" src="https://www.youtube.com/embed/OgNEnFJNiGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section class="container__header-section-4">
+                <div class="container__header-section-4-title">
+                    <div class="container__header-section-4-title-img" data-aos="fade-right">
+                        <img src="./assets/img/Phoenix_-_Full_body.png" alt="" class="container__header-section-4-img-item">
+                    </div>
+
+                    <div class="container__header-section-4-text">
+                        <h2 class="container__header-section-4-text-h2" data-aos="fade-left">ĐẶC VỤ CỦA BẠN</h2>
+
+                        <h4 class="container__header-section-4-text-h4" data-aos="fade-up">VŨ KHÍ TỐI THƯỢNG CHÍNH LÀ TRÍ SÁNG TẠO CỦA BẠN.</h4>
+
+                        <p class="container__header-section-4-text-p" data-aos="fade-left">Ngoài việc trang bị súng đạn, hãy chọn cho mình một Đặc Vụ có kỹ năng phù hợp để giúp bạn tỏa sáng trong những màn đấu súng. Không có Đặc Vụ nào giống nhau, mỗi cá nhân đều là độc nhất.</p>
+
+                        <button class="container__title-btn section4-btn__style" data-aos="flip-up">
+                            <div class="container__title-btn-hover">
+                                <span class="container__title-hover-text section4-text__style">
+                                    XEM TẤT CẢ ĐIỆP VIÊN
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section class="container__header-section-5">
+                <div class="container__header-section-2-backGround-text">
+                    <h2 class="backGround-text" data-aos="fade-right">
+                        <span class="backGround-text-item1">PLACE</span>
+                    </h2>
+                </div>
+
+                <div class="container__header-section-5-title">
+                    <div class="container__header-section-5-title-img">
+                        <img src="./assets/img/maps-03ebbf2c074f13a65af1dba0c80f767e.png" alt="" class="container__header-section-5-title-img-item">
+                    </div>
+
+                    <div class="container__header-section-5-text">
+                        <h3 class="container__header-section-5-text-h3" data-aos="fade-right">BẢN ĐỒ CỦA BẠN</h3>
+    
+                        <h5 class="container__header-section-5-text-h5" data-aos="fade-up">CHIẾN ĐẤU KHẮP THẾ GIỚI</h5>
+    
+                        <p class="container__header-section-5-text-p" data-aos="fade-up">Mỗi bản đồ đều là một sân chơi để bạn thỏa sức thể hiện tư duy sáng tạo của mình. Được xây dựng với mục đích phát triển chiến lược đội nhóm nhằm mang đến các trận đấu ngoạn mục và những khoảnh khắc xuất thần. Hãy tạo ra lối chơi đi vào lịch sử mà ai cũng muốn học hỏi.</p>
+    
+                        <button class="container__title-btn section__5-btn" data-aos="flip-down">
+                            <div class="container__title-btn-hover section__5-btn-border">
+                                <span class="container__title-hover-text">
+                                    XEM TẤT CẢ BẢN ĐỒ
+                                </span>
+                            </div>
+                    </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+            <div class="footer">
+                <div class="footer__item">
+                    <h3 class="footer__item-title">TẢI TRÒ CHƠI</h3>
+
+                    <a href="#" class="footer__item-link">
+                        <svg width="99" height="32" class="" viewBox="0 0 109 35">
+                            <title>riotLogo-mobile</title>
+                            <path
+                                d="M17.714 31.681l-1.576-4.09 15.219.79-.684 6.545-12.96-3.245zM21.36 0L.062 10.143l3.293 15.284H7.7l-.75-10.932.667-.21 2.612 11.142h4.513l-.167-13.317.667-.21 2.282 13.527h4.78L23.43 9.341l.667-.21 1.181 16.296h6.32l2.224-22.37L21.359 0zm84.102 31.125l-6.06-1.035.027-.8 5.799-.216-.148-1.527h-7.455l-.382 3.834 6.162 1.08.029.706-6.412.252-.158 1.527h8.974l-.376-3.82zm-57.895-.572l-.093 1.384 2.208.075-.029 1.404-4.618-.136.202-4.06 6.352-.15-.093-1.526h-8.204l-.735 7.4h9.346l-.24-4.463-4.096.072zm39.566 2.717l-.045-1.274 4.372-.052.041-1.391-4.464-.055-.045-1.291 5.883-.14.048-1.523h-7.934l-.237 7.4h8.319l-.058-1.528-5.88-.146zm-6.406 1.673l-.735-7.4h-2.111l-3.037 3.527-3.032-3.526H69.7l-.735 7.4h2.48l.238-4.799 3.161 3.271 3.165-3.271.237 4.798h2.481zM70.3.454h-4.965l-.453 22.877h5.998L70.3.454zm20.188.008h-15.48l-.602 22.868h17.183L90.488.462zm-4.801 17.892l-5.479.178-.183-13.457 5.729.175-.067 13.104zM109 5.459l-.552-5.005H93.194l.128 4.458 4.882.172.497 18.247h6.011L102.915 5.25l6.085.21zM55.624 23.331h6.515l-4.246-10.269 3.389-1.867L58.965.454H42.33l-.545 4.956 3.72-.126-1.795 18.047h5.822l.157-5.752 4.195-2.31 1.74 8.062zM50.033 5.132l4.785-.162.546 4.559-5.524 2.63.193-7.027zm12.908 29.811h2.513l-1.986-7.4h-5.896l-1.986 7.4h2.513l.388-1.867 4.079.052.375 1.815zm-4.15-3.336l.505-2.42 2.423-.11.507 2.43-3.434.1z"
+                                fill="#E6E6E6"
+                            ></path>
+                        </svg>  
+                        
+                        <div class="footer__item-link-img">
+                            <img src="./assets/img/Logo-VNG-Corp.png" alt="" class="footer__item-link-img-item">
+                        </div>
+                    </a>
+
+                    <ul class="footer__item-list">
+                        <li class="footer__item-list-item">
+                            <i class="footer__item-list-item-icon fab fa-facebook"></i>
+                        </li>
+                        <li class="footer__item-list-item">
+                            <i class="footer__item-list-item-icon fab fa-youtube"></i>
+                        </li>
+                        <li class="footer__item-list-item">
+                            <i class="footer__item-list-item-icon fab fa-instagram"></i>
+                        </li>
+                    </ul>
+
+                    <p class="footer__item-text">© 2021 Riot Games, Inc.</p>
+
+                    <p class="footer__item-text">Công Ty Cổ Phần VNG. Địa chỉ: Lô 03b-04-05-06-07, đường số 13, khu Công Nghiệp, Khu Chế Xuất Tân Thuận, phường Tân Thuận Đông, Quận 7, TP.HCM.</p>
+
+                    <ul class="footer__item-list2">
+                        <li class="footer__item-list2-item">
+                            <a href="" class="footer__item-list2-link">
+                                Chính Sách Bảo Mật
+                            </a>
+                        </li>
+                        <li class="footer__item-list2-item">
+                            <a href="" class="footer__item-list2-link">
+                                Điều Khoản Sử Dụng (Riot)
+                            </a>
+                        </li>
+                        <li class="footer__item-list2-item">
+                            <a href="" class="footer__item-list2-link">
+                                Điều Khoản Sử Dụng (VNG)
+                            </a>
+                        </li>
+                        <li class="footer__item-list2-item">
+                            <a href="" class="footer__item-list2-link">
+                                Tùy Chọn Cookies
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__item-img2">
+                        <img src="./assets/img/vn-18plus.png" alt="" class="footer__item-img2-item">
+                    </div>
+                </div>
+            </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
